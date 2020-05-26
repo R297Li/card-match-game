@@ -1,0 +1,226 @@
+
+@font-face {
+    font-family: "Title-Font";
+    src: url("../res/Fonts/christmasTitleFont.ttf");
+}
+
+
+@font-face {
+    font-family: "SubText-Font";
+    src: url("../res/Fonts/christmasSubTextFont.ttf");
+}
+
+/*** all elements ***/
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100vh;
+}
+
+/*******************/
+
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #C12020;
+    font-family: Title-Font, Cambria;
+}
+
+.overlay-text-small {
+    font-size: .3em;
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0,0,0,0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0,0,0,.8);
+        font-size: 10em;
+    }
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(rgb(119, 161, 102), rgb(17, 71, 4));
+}
+
+.page-title {
+    color: black;
+    font-family: Title-Font, Cambria;
+    font-weight: normal;
+    text-align: center;
+    font-size: 7em; /* Scalable font size based on default font size */
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+
+.game-container {
+    margin: 50px;
+    justify-content: center;
+    perspective: 500px;
+}
+
+.game-info-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.game-info {
+    color: black;
+    font-family: SubText-Font, Cambria;
+    font-size: 2.5em;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    justify-content: center;
+    margin: 40px;
+}
+
+.card {
+    position: relative;
+    height: 175px;
+    width: 125px;
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0);
+}
+
+.card.matched .card-value {
+    animation: dance 1s linear infinite 500ms;
+}
+
+@keyframes dance {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(30deg);
+    }
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 1px;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+}
+
+.card-face:hover .christmas-lights {
+    width: 52px;
+    height: 52px;
+}
+
+.card-back {
+    background-color: rgb(5, 59, 12);
+    border-color: black;
+}
+
+.card-back:hover .gift {
+    transform: translateY(-10px);
+}
+
+.card-front {
+    background-color: #FFBB89;
+    border-color: #333333;
+    transform: rotateY(180deg);
+}
+
+.card-front:hover .card-value {
+    transform: scale(1);
+}
+
+.christmas-lights {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+
+.christmas-lights-back {
+    content: url(../res/Images/christmas/bulbs.png);
+}
+
+.christmas-lights-front {
+    content: url(../res/Images/christmas/bulbs-lightGreen.png);
+}
+
+.christmas-lights-top-left {
+    top: 0;
+    left: 0;
+}
+
+.christmas-lights-top-right {
+    transform: rotate(90deg);
+    top: 0;
+    right: 0;
+}
+
+.christmas-lights-bottom-left {
+    transform: rotate(270deg);
+    bottom: 0;
+    left: 0;
+}
+
+.christmas-lights-bottom-right {
+    transform: rotate(180deg);
+    bottom: 0;
+    right: 0;
+}
+
+.card-value {
+    transform: scale(0.9);
+    transition: transform 100ms ease-in-out;
+}
+
+.gift {
+    transition: transform 100ms ease-in-out;
+    content: url(../res/Images/christmas/gift-red.png);
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .game-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

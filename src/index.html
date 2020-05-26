@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" async></script>
+    <title>Memory Match</title>
+</head>
+<body>
+    <h1 class="page-title">Memory Match</h1>
+    <div id="overlay-start" class="overlay-text visible">Click to Play</div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time: <span id="time-remaining">NA</span>
+            </div>
+            <div class="game-info">
+                Flips: <span id="flips">NA</span>
+            </div>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                      
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/snow.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/mistletoe-1.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/candyCane.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/cookie.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/fireplace.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/reindeer.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/tree.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/wreath.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                     
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/snow.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/mistletoe-1.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/candyCane.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/cookie.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/fireplace.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/reindeer.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/tree.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-back">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-back christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="gift" alt="gift">                        
+                </div>
+                <div class="card-face card-front">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-top-right" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-left" alt="Cob Web">
+                    <img class="christmas-lights christmas-lights-front christmas-lights-bottom-right" alt="Cob Web">
+                    <img class="card-value" src="../res/Images/christmas/wreath.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay-end" class="overlay-text">
+        <div id="overlay-text-end"></div>
+        <div class="overlay-text-small">Click to Restart</div>
+    </div>
+</body>
+</html>
